@@ -71,7 +71,7 @@
 <p>I took notes for the steps I did and hoped I  don’t get stuck and succumb.<br><a id="more"></a><br>As it turns out, by some great luck, it’s fixed. Here’s what happened.</p>
 <p><strong>TL;DR</strong> &rarr; I re-installed some stuff using different configurations.</p>
 <p>The error popped out. MacVim forced me to tap a key after the error shows up and I can get to edit again. I checked my <code>.vimrc</code>&hellip; nothing seems out of context. I checked my <code>go env</code>, all looks good. Strange.</p>
-<p>I remember I installed go from the official package, so my <code>$GOROOT</code> is pointed to <code>/usr/local/go</code>. Oh well, since it’s been long since I updated to 1.5 anyway, let’s just demolish them and try installing them via <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>. Hello, 1.6.2!</p>
+<p>I remember I installed go from the official package, so my <code>$GOROOT</code> is pointed to <code>/usr/local/go</code>. Oh well, it’s been long since I updated to 1.5 anyway, let’s just demolish them and try installing them via <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>. So I did. I removed <code>usr/local/go</code> and execute <code>brew install go</code>. Hello, 1.6.2!</p>
 <p>MacVim still broken. Of course.</p>
 <p>After I read some <code>:help vim-go</code>, I tried <code>:GoUpdateBinaries</code> and let it install things to my <code>$GOPATH/bin</code>. Error message still persists. At that time I got my <a href="https://www.iterm2.com/" target="_blank" rel="external">iTerm</a> opened and I just want to double check my environment variables on my <code>.zshrc</code>.</p>
 <p>So I fired up <code>vim</code> &mdash; <sup><sub>hooray muscle memory</sub></sup>.</p>
