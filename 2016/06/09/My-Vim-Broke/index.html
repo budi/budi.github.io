@@ -68,7 +68,7 @@
   </header>
   <p>For the past three days, I have a problem with my Vim. My <a href="https://macvim-dev.github.io/macvim/" target="_blank" rel="external">MacVim</a>, to be precise. I have been working on some <a href="https://golang.org/" target="_blank" rel="external">Golang</a> projects lately, and I use <a href="https://github.com/fatih/vim-go" target="_blank" rel="external">vim-go</a> for quite some time. For reasons unknown &mdash; okay, I <em>forgot</em> what I did &mdash; it spewed out an error saying that <code>goimports does not support srcdir</code> when I tried to save a file.</p>
 <p>At that very first occurrence, I decided: <strong><em>I will not Google this shit</em></strong>.</p>
-<p>I took notes for the steps I did and hoped I  don’t get stuck and succumb.<br><a id="more"></a><br>As it turns out, by some great luck, I sorta made it. Here’s what happened.</p>
+<p>I took notes for the steps I did and hoped I  don’t get stuck and succumb.<br><a id="more"></a><br>As it turns out, by some great luck, it’s fixed. Here’s what happened.</p>
 <p><strong>TL;DR</strong> &rarr; I re-installed some stuff using different configurations.</p>
 <p>The error popped out. MacVim forced me to tap a key after the error shows up and I can get to edit again. I checked my <code>.vimrc</code>&hellip; nothing seems out of context. I checked my <code>go env</code>, all looks good. Strange.</p>
 <p>I remember I installed go from the official package, so my <code>$GOROOT</code> is pointed to <code>/usr/local/go</code>. Oh well, since it’s been long since I updated to 1.5 anyway, let’s just demolish them and try installing them via <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>. Hello, 1.6.2!</p>
