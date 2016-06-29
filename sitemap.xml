@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://budidharmawan.com/Hit-List/index.html</loc>
+    
+    <lastmod>2016-06-29T01:30:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://budidharmawan.com/2016/06/09/My-Vim-Broke/</loc>
     
     <lastmod>2016-06-09T17:09:12.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://budidharmawan.com/2016/05/30/Hexo-Github-Pages-Cloudflare-SSL/</loc>
     
     <lastmod>2016-06-01T00:07:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://budidharmawan.com/Hit-List/index.html</loc>
-    
-    <lastmod>2016-05-30T10:22:11.000Z</lastmod>
     
   </url>
   
