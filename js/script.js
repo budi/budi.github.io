@@ -1,1 +1,0 @@
-"use strict";var l=document.links,i=0;for(l;l[i];i++)l[i].host!==location.host&&(l[i].target="_blank");document.getElementById("navigation-link").onclick=function(t){t.preventDefault(),document.getElementById("navigation-wrap").classList.toggle("active")};
