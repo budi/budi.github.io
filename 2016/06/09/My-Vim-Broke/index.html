@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>My Vim Broke — Or My Go? &middot; Budi Dharmawan</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="author" content="Budi Dharmawan">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="canonical" href="https://budidharmawan.com">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="text/javascript">
+    var host = "budidharmawan.com";if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+  </script>
+  <script src="/js/highlight.pack.js"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-53666486-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  
+</head></html>
+<body itemscope itemtype="http://schema.org/Blog">
+  <header id="main-header" class="container">
+  <h1 class="icon-bubu"><span>Budi Dharmawan</span></h1>
+  
+    <h2 id="subtitle-wrap">
+      <a href="/" id="subtitle" data-letters="A.K.A. BUBS">A.K.A. BUBS</a>
+    </h2>
+  
+  
+    <p>Brown eyes, deuteranomalic. Oh the irony.</p>
+  
+</header>
+  <div id="navigation-wrap">
+  <a href="#" id="navigation-link"><span class="icon-navicon"></span></a>
+  <nav id="main-nav" class="container">
+    <ul>
+      
+        <li><a href="/"><span>Home</span></a></li>
+      
+        <li><a href="/Archives/"><span>Archives</span></a></li>
+      
+        <li><a href="/Hit-List/"><span>Hit List</span></a></li>
+      
+        <li><a href="/Colophon/"><span>Colophon</span></a></li>
+      
+    </ul>
+  </nav>
+</div>
+  <main class="post-single container">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <p class="post-meta">
+    <a href="/2016/06/09/My-Vim-Broke/" class="pubdate"><time datetime="2016-06-08T20:37:56.000Z" itemprop="dateCreated">June 9</time></a> <span itemprop="keywords" class="tags"><a class="tag-link" href="/Tags/Challenge/">Challenge</a>, <a class="tag-link" href="/Tags/Golang/">Golang</a>, <a class="tag-link" href="/Tags/Vim/">Vim</a></span>
+    </p>
+    <h1 itemprop="headline">My Vim Broke — Or My Go?</h1>
+    <a itemprop="url" href="/2016/06/09/My-Vim-Broke/" title="Permanent link to `My Vim Broke — Or My Go?`" class="permalink inside" aria-hidden="true">&#8681;</a>
+  
+  </header>
+  <p>For the past three days, I have a problem with my Vim. My <a href="https://macvim-dev.github.io/macvim/" target="_blank" rel="external">MacVim</a>, to be precise. I have been working on some <a href="https://golang.org/" target="_blank" rel="external">Golang</a> projects lately, and I use <a href="https://github.com/fatih/vim-go" target="_blank" rel="external">vim-go</a> for quite some time. For reasons unknown &mdash; okay, I <em>forgot</em> what I did &mdash; it spewed out an error saying that <code>goimports does not support srcdir</code> when I tried to save a file.</p>
+<p>At that very first occurrence, I decided: <strong><em>I will not Google this shit</em></strong>.</p>
+<p>I took notes for the steps I did and hoped I  don’t get stuck and succumb.<br><a id="more"></a><br>As it turns out, by some great luck, it’s fixed. Here’s what happened.</p>
+<p><strong>TL;DR</strong> &rarr; I re-installed some stuff using different configurations.</p>
+<p>The error popped out. MacVim forced me to tap a key after the error shows up and I can get to edit again. I checked my <code>.vimrc</code>&hellip; nothing seems out of context. I checked my <code>go env</code>, all looks good. Strange.</p>
+<p>I remember I installed go from the official package, so my <code>$GOROOT</code> is pointed to <code>/usr/local/go</code>. Oh well, it’s been long since I updated to 1.5 anyway, let’s just demolish them and try installing them via <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>. So I did. I removed <code>usr/local/go</code> and execute <code>brew install go</code>. Hello, 1.6.2!</p>
+<p>MacVim still broken. Of course.</p>
+<p>After I read some <code>:help vim-go</code>, I tried <code>:GoUpdateBinaries</code> and let it install things to my <code>$GOPATH/bin</code>. Error message still persists. At that time I got my <a href="https://www.iterm2.com/" target="_blank" rel="external">iTerm</a> opened and I just want to double check my environment variables on my <code>.zshrc</code>.</p>
+<p>So I fired up <code>vim</code> &mdash; <sup><sub>hooray muscle memory</sub></sup>.</p>
+<p>Just when I opened my <a href="https://github.com/xolox/vim-session" target="_blank" rel="external">session</a> menu, I thought hey, “<em>Hold on a second. Let’s try do some Go stuff from terminal vim</em>“. Shocking truth: <strong>everything works</strong>. The troubled <code>goimports</code>, <code>:GoDef</code>, everything works.</p>
+<p>For the next four days, I did my daily tasks using terminal vim. I really have nothing to complain except for its rendering time.</p>
+<p>Four days. Slow renders. I miss MacVim.</p>
+<p>I tried switching back and used <code>gofmt</code> instead of <code>goimports</code>. It works, but no imports automation. Sucks.</p>
+<p>I tried re-installing my MacVim with system Ruby, Python 2, etc. Back to basic. No Python 3, lua-jit, etc. Removed not-that-much-used plugins&hellip; no luck. Then I realized, <code>gofmt</code> is installed in <code>/usr/local/go/bin</code> and it works, but my <code>$GOPATH/bin</code> didn’t get picked up.</p>
+<p>I set my<code>$GOBIN</code>, then. I pointed my <code>$GOBIN</code> to <code>/usr/local/go/bin</code> and run <code>:GoUpdateBinaries</code>.</p>
+<p>Voila! MacVim now works with <code>vim-go</code> and all its binaries installed on <code>/usr/local/go/bin</code>.</p>
+<h2 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h2><p>I’m not really sure I fixed it because I:</p>
+<ul>
+<li>Re-installed Go using Homebrew, now using Go 1.6.2 instead of 1.5</li>
+<li>Re-installed MacVim using system Ruby</li>
+<li>Point <code>$GOBIN</code> to <code>/usr/local/go/bin</code></li>
+</ul>
+<p>&hellip; but I fixed it without Googling. It takes more time, for sure, but I think I’ll do this kind of practice every once in a while. I don’t want to be that one guy who just so good at querying questions. I want to fix things.</p>
+  <hr class="separator">
+  <section id="disqus_thread" class="comments-wrap" itemscope itemtype="http://schema.org/UserComments"></section>
+  <script>var disqus_config = function () { this.page.url = 'http://budidharmawan.com//2016/06/09/My-Vim-Broke/'; this.page.identifier = 'My Vim Broke — Or My Go?'; }; (function() {	var d = document, s = d.createElement('script'); s.src = '//budidharmawan.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();</script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+</main>
+  <footer id="main-footer">
+  <div class="row">
+    <div class="one-half column">
+      
+        <a href="/">A.K.A. BUBS</a> &copy; 2016 by Budi Dharmawan
+      
+    </div>
+    <div class="one-half column">
+      <blockquote>
+        &ldquo;I am not a consecutive writer.&rdquo; 
+        <footer>
+          &mdash; <cite>Dr. Seuss</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</footer>
+  <script src="/js/script.js"></script>
+</body>
