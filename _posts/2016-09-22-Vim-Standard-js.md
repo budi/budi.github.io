@@ -1,5 +1,6 @@
 ---
 title: Vim + Standard.js
+layout: post
 tags:
   - Techy
   - Vim

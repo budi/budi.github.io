@@ -1,5 +1,6 @@
 ---
 title: 'Hexo, Github Pages, CloudFlare, SSL : Holy Shit'
+layout: post
 tags:
   - Techy
   - Hexo

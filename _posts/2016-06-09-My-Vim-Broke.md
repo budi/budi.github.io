@@ -1,5 +1,6 @@
 ---
 title: My Vim Broke — Or My Go?
+layout: post
 tags:
   - Techy
   - Vim
