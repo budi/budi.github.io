@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "bd";
+  src:url("../fonts/bd.eot");
+  src:url("../fonts/bd.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/bd.woff") format("woff"),
+    url("../fonts/bd.ttf") format("truetype"),
+    url("../fonts/bd.svg#bd") format("svg");
+
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+  text-transform: none !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-family: "bd" !important;
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-transform: none !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-family: "bd" !important;
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bubu:before {
+  content: "\31";
+}
+.icon-navicon:before {
+  content: "\32";
+}
+.icon-calendar:before {
+  content: "\33";
+}
+.icon-tag:before {
+  content: "\34";
+}
+.icon-clock:before {
+  content: "\35";
+}
+.icon-cancel:before {
+  content: "\36";
+}
+.icon-search:before {
+  content: "\37";
+}
