@@ -12,5 +12,6 @@ This blog is far from what I want it to be, and it will remain undone for all I 
 4. ~~Open up comments section,~~ <sup>Opened May 30, 2016</sup>
 5. ~~Implement good looking archives page,~~ <sup>Published June 29, 2016</sup>
 6. Get search up and running,
-7. Make a layout for "photos" post,
-8. Publish the theme on a public repository.
+7. ~~Make a layout for "photo" posts,~~ <sup>Nevermind, don't bother</sup>
+8. Make a layout for "bookmark" posts,
+9. ~~Publish the theme on a public repository.~~ <sup>Published September 11, 2017 on Github.</sup>
