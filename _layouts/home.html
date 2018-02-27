@@ -22,7 +22,7 @@
         </header>
         {{ post.excerpt }}
         {% assign words = post.content | number_of_words %}
-        {% if words >= 100 %}
+        {% if 100 <= words and words < 360 %}
           <a href="{{ post.url }}" class="read-more button">{{ words }} words&rarr;</a>
         {% elsif words >= 360 %}
           <a href="{{ post.url }}" class="read-more button">{{ words | divided_by:180 }} minutes read &rarr;</a>
