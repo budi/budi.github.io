@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0 0 120px;
-  background-color: snow;
+  background-color: #EEEFF0;
 }
 
 #main-header {
@@ -16,15 +16,16 @@ body {
     color: darkslategray;
   }
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     height: 135px;
     span {
-      display: none;
-    }
-    &::before {
-      color: dimgrey;
-      font-size: 9rem;
-      transition: color 0.3s 0.2s;
+        display: inline-block;
+        height: 135px;
+        background: url('../images/skull.jpeg') no-repeat center;
+        background-size: 200px 200px;
+        text-indent: -1000em;
+        width: 135px;
+        margin-bottom: 20px;
     }
   }
   h2 {
