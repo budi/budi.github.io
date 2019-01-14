@@ -4,7 +4,7 @@ layout: page
 date: 2016-05-29 01:20:03
 permalink: /Colophon/
 ---
-Before anything else, the first thing you gotta know about him is that he often writes about himself in third person only to make himself feel more down-to-earth. He promised &mdash; even though he <sub><sup>consciously</sup></sub> knows that he will break it soon enough &mdash; to actively contribute to the _communities_ at least on [Github](https://github.com/budi/).
+Can't say much, really.
 
 Even though lately he doesn't [tweet](https://twitter.com/budi) that much and keep resetting his [Instagram](https://instagram.com/mmmbut/) account[^1], those two channels are still the ones that are the most curent and available for public.
 
