@@ -8,7 +8,7 @@
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header>
           <p class="post-meta">
-            <a href="{{ post.url }}" class="pubdate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="dateCreated">{{ post.date | date: "%B %-d" }}</time></a>
+            <a href="{{ post.url }}" class="pubdate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="dateCreated">{{ post.date | date: "%B %-d %Y" }}</time></a>
             {% if post.tags %}
               <span itemprop="keywords" class="tags">
               {% for tag in post.tags %}
