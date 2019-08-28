@@ -6,7 +6,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	<header>
     <p class="post-meta">
-      <a href="{{ page.url }}" class="pubdate"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="dateCreated">{{ page.date | date: "%B %-d" }}</time></a>
+      <a href="{{ page.url }}" class="pubdate"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="dateCreated">{{ page.date | date: "%B %-d %Y" }}</time></a>
       {% if page.tags %}
         <span itemprop="keywords" class="tags">
         {% for tag in page.tags %}
